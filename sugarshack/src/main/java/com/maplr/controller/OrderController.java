@@ -17,9 +17,15 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponses;
 import io.swagger.annotations.ApiResponse;
 
+/**
+ * Controler commande
+ * @author mamad
+ *
+ */
 @RestController
 @RequestMapping("/order")
 public class OrderController {
+	/** Service commande */
 	private final OrderService orderService;
 
 	@Autowired
@@ -27,6 +33,11 @@ public class OrderController {
 		this.orderService = orderService;
 	}
 
+	/**
+	 * Renvoie une reponse avec la commande valide
+	 * @param lines : liste de commandes
+	 * @return ResponseEntity<OrderValidationResponseDto>
+	 */
 	@PostMapping
 	@ApiOperation(value = "Passe une commande", consumes = "application/json", produces = "application/json")
 	@ApiResponses(value = {

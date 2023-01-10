@@ -17,9 +17,15 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponses;
 import io.swagger.annotations.ApiResponse;
 
+/**
+ * Controler produit
+ * @author mamad
+ *
+ */
 @RestController
 @RequestMapping("/products/{productId}")
 public class ProductsController {
+	/** Service produit */
 	private final ProductService productService;
 
 	@Autowired
@@ -27,8 +33,13 @@ public class ProductsController {
 		this.productService = productService;
 	}
 
+	/**
+	 * Renvoie une reponse contenant le catalogue produit
+	 * @param type : type de produit
+	 * @return ResponseEntity<List<CatalogueItemDto>>
+	 */
 	@GetMapping
-	@ApiOperation(value = "Recupere le catalogue produit", produces = "application/json")
+	@ApiOperation(value = "renvoie le catalogue produit", produces = "application/json")
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "OK"), 
 			@ApiResponse(code = 401, message = "Unauthorized")})

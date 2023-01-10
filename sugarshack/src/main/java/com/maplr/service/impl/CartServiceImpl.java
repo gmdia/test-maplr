@@ -16,8 +16,13 @@ import com.maplr.service.CartService;
 
 import io.swagger.annotations.Api;
 
+/**
+ * Implemente Service panier
+ * @author mamad
+ *
+ */
 @Service
-@Api(tags = "Service panier")
+@Api(tags = "Implemente Service panier")
 public class CartServiceImpl implements CartService{
 	private final ProductServiceImpl productService;
 	private final CartRepository cartRepository;

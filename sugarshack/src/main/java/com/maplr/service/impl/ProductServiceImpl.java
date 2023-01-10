@@ -16,8 +16,13 @@ import com.maplr.service.ProductService;
 
 import io.swagger.annotations.Api;
 
+/**
+ * Implemente Service produit
+ * @author mamad
+ *
+ */
 @Service
-@Api(tags = "Service produit")
+@Api(tags = "Implemente Service produit")
 public class ProductServiceImpl implements ProductService{
 	private final ProductRepository productRepository;
 	private ProductMapper productMapper;

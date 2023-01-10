@@ -17,8 +17,13 @@ import com.maplr.service.OrderService;
 
 import io.swagger.annotations.Api;
 
+/**
+ * Implemente Service commande
+ * @author mamad
+ *
+ */
 @Service
-@Api(tags = "Service commande")
+@Api(tags = "Implemente Service commande")
 public class OrderServiceImpl implements OrderService{
 	private ProductServiceImpl productService;
 	private OrderRepository orderRepository;
