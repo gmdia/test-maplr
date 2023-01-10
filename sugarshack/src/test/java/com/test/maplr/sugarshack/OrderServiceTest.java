@@ -19,23 +19,23 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.maplr.dto.OrderLineDto;
 import com.maplr.dto.OrderValidationResponseDto;
 import com.maplr.repository.OrderRepository;
-import com.maplr.service.OrderService;
-import com.maplr.service.ProductService;
+import com.maplr.service.impl.OrderServiceImpl;
+import com.maplr.service.impl.ProductServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 public class OrderServiceTest {
 
 	@Mock
-	private ProductService productService;
+	private ProductServiceImpl productService;
 
 	@Mock
 	private OrderRepository orderRepository;
 
-	private OrderService orderService;
+	private OrderServiceImpl orderService;
 
 	@BeforeEach
 	public void setUp() {
-		orderService = new OrderService(productService, orderRepository);
+		orderService = new OrderServiceImpl(productService, orderRepository);
 	}
 
 	@Test

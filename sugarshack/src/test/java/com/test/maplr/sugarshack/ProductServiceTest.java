@@ -12,7 +12,7 @@ import com.maplr.entity.Product;
 import com.maplr.enumeration.ProductType;
 import com.maplr.mapper.ProductMapper;
 import com.maplr.repository.ProductRepository;
-import com.maplr.service.ProductService;
+import com.maplr.service.impl.ProductServiceImpl;
 
 import java.math.BigDecimal;
 import java.util.Collections;
@@ -31,11 +31,11 @@ class ProductServiceTest {
 	@Mock
 	private ProductMapper productMapper;
 
-	private ProductService productService;
+	private ProductServiceImpl productService;
 
 	@BeforeEach
 	public void setUp() {
-		productService = new ProductService(productRepository, productMapper);
+		productService = new ProductServiceImpl(productRepository, productMapper);
 	}
 
 	@Test
