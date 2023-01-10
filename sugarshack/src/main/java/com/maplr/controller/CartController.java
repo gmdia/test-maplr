@@ -51,7 +51,7 @@ public class CartController {
 	}
 
 	/**
-	 * Renvoie uen reponse valide si ajout ok
+	 * Renvoie une reponse valide si ajout ok
 	 * @param productId : id produit
 	 * @param qty : quantite
 	 * @return ResponseEntity<Void>
@@ -67,7 +67,7 @@ public class CartController {
 	}
 
 	/**
-	 * Renvoie uen reponse valide si suppression ok
+	 * Renvoie une reponse valide si suppression ok
 	 * @param productId : id produit
 	 * @return ResponseEntity<Void>
 	 */
